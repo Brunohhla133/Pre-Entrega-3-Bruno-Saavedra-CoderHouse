@@ -9,8 +9,17 @@ $font1: serif;
 //*Dimensiones*//
 $size1: 100%;
 $size2:50%;
-
-
+/*Media queries*/
+$xs: 576px;
+$sm: 576px;
+$md: 768;
+$lg: 992;
+$xl: 1200px;
+/*Backgrouds*/
+$fondo1: url(../imagenes/tienda-ropa/Diseño\ sin\ título\ \(23\).png);
+$fondo2: url(../imagenes/tienda-ropa/Diseño\ sin\ título\ \(3\).png);
+$fondo3: url(../imagenes/tienda-ropa/Diseño\ sin\ título\ \(18\).png);
+$fondo4: url(../imagenes/tienda-ropa/Contacto.png);
 *{
     margin: 0;
     padding: 0;
@@ -56,8 +65,12 @@ body{
         border: none;
     }
 }
+@media (width <= $xs){
 
-//*Jumbotron*//
+
+}
+
+//*Jumbotron p-5*//
 
 .p-5{
     width: $size1;
@@ -101,6 +114,8 @@ main {
 }
 
 @import "_item.scss";
+@import "_clientes.scss";
+
 
 /*Footer*/
 
@@ -123,7 +138,7 @@ footer{
 
 /* MEDIA QUERIES */
 
-@media  screen and (width < 600px) {
+@media screen and (width < 600px) {
     footer{
         width: $size1;
     }
@@ -144,31 +159,38 @@ footer{
     text-align: center;
     }
 }
-.jumbotron{
+@media screen and (width > 1200px){
+    footer{
+        width: 100%;
+    }
+}
+
+
+/*Mixin jumbotron*/
+@mixin fondo{
     width: 100%;
     height: 500px;
     background-position: center;
     background-size: cover;
 }
-//*Jumbotron*//
-$jumbotron: indumentaria;
 
-/*Mi constante*/
-
-.jumbotron{
-    @if $jumbotron==indumentaria {
-        background-image: url(../imagenes/tienda-ropa/Diseño\ sin\ título\ \(23\).png);
-    }
-
-    @else if $jumbotron==clientes{
-        background-image: url(../imagenes/tienda-ropa/Diseño\ sin\ título\ \(3\).png);
-    }
-
-    @else if $jumbotron==nosotros{
-        background-image: url(../imagenes/tienda-ropa/Diseño\ sin\ título\ \(18\).png);
-    }
-
-    @else if $jumbotron==contacto{
-        background-image: url(../imagenes/tienda-ropa/Contacto.png);
-    }
+.jumbotron-1{
+    @include fondo;
+    background-image: $fondo1;
 }
+
+.jumbotron-2{
+    @include fondo;
+    background-image: $fondo2;
+}
+
+.jumbotron-3{
+    @include fondo;
+    background-image: $fondo3;
+}
+
+.jumbotron-4{
+    @include fondo;
+    background-image: $fondo4;
+}
+

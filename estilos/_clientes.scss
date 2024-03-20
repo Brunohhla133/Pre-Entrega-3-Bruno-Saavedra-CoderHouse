@@ -1,0 +1,74 @@
+/* Clientes */
+
+.intro{
+    text-align: center;
+    width: 100%;
+    padding: 20px;
+    color: aliceblue;
+    font-size: 40px;
+}
+
+.container{
+    background-color: hsla(36, 3%, 30%, 0.356);
+    margin-top: 10px;
+    margin-bottom: 20px;
+}
+.container img{
+    display: block;
+    margin: 0 auto;
+    width:fit-content;
+    height: 150px;
+    border: 5px solid #e68b14
+}
+
+h3{
+    display: block;
+    margin: 0 auto;
+    text-align: center;
+    font-size: 30px;
+    color: #FFBD59;
+    margin-bottom: 15px;
+}
+
+.container p{
+    color: aliceblue;
+    font-size: 20px;
+}
+
+p{
+    display: block;
+    margin: 0 auto;
+    text-align: center;
+    margin-top: 20px;
+}
+.p, span{
+    color: #FFBD59;
+}
+
+
+/* Media Queries Clientes.html */
+@media only screen and (max-width:600px){
+    .intro{
+        width: 100%;
+    }
+}
+    
+    
+    @media only screen and (max-width:600px){
+    .container{
+        width: 100%;
+    }
+}
+    
+    @media only screen and (max-width:1200px){
+    .container{
+        width: 100%;
+    }
+}
+    
+    @media only screen and (max-width:1200px){
+    .container img{
+        width: 150px;
+        height: auto;
+    }
+}
