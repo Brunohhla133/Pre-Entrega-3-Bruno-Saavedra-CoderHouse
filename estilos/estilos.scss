@@ -5,6 +5,12 @@ $color3:#e68b14;
 $color4:hsla(36, 3%, 30%, 0.911);
 //*Font Family*//
 $font1: serif;
+@import url('https://fonts.googleapis.com/css2?family=PT+Serif:ital,wght@1,700&display=swap');
+//*Dimensiones*//
+$size1: 100%;
+$size2:50%;
+
+
 *{
     margin: 0;
     padding: 0;
@@ -14,16 +20,16 @@ $font1: serif;
 body{
     background-color:  black;
 }
-@import url('https://fonts.googleapis.com/css2?family=PT+Serif:ital,wght@1,700&display=swap');
+
 
 //*NavBar*//
 .navbar{
-    width: 100%;
+    width: $size1;
     background-color: $color4;
     z-index: 1;
     position: fixed;
     .nav-link{
-        font-size: 20px;
+        font-size: 15px;
         color: white;
         text-shadow:0 0 5px $color3;
         margin: 20px;
@@ -37,7 +43,7 @@ body{
         background-color: $color4;
     }
     .navbar-brand, .a{
-        font-size: 20px;
+        font-size: 30px;
         text-shadow:0 0 5px $color3;
         color: $color2;
     }
@@ -54,18 +60,18 @@ body{
 //*Jumbotron*//
 
 .p-5{
-    width: 100%;
+    width: $size1;
     background-color: black;
     margin-bottom: 10px;
     img{
-        width: 100%;
+        width: $size1;
         margin-top: 80px;
     }
 }
 
 /* h1 */
 .titulo h1{
-    width: 100%;
+    width: $size1;
     font-size: 50px;
     text-align: center;
     color: $color2;
@@ -75,7 +81,7 @@ body{
 
 /* Main */
 main {
-    width: 100%;
+    width: $size1;
     overflow: hidden;
     padding: 10px;
 }    
@@ -93,113 +99,13 @@ main {
     padding: 5px;
     box-shadow: inset 0 0 10px $color3;
 }
-//*Container-Items*//
-.item{
-    display: block;
-    margin: 0 auto;
-    text-align: center;
-    margin-top: 20px;
-    margin-bottom: 30px;
-    width: 50%;
-    border-radius: 50px;
-    overflow: hidden;
-    img{
-        width: 100%;
-        transition: all .5s;
-    }
-}
 
-.conteiner-items:hover{
-    box-shadow: 1px 1px 10px 1px $color2;
-}
-
-.item:hover{
-    box-shadow: 1px 1px 10px 1px $color2;
-}
-
-.item:hover img{
-    transform: scale(1.1);
-}
-
-.info-product{
-    h4{
-        background-color: $color2;
-        border: 5px solid $color3;
-        font-size: 30px;
-        width: 50%;
-        padding: 10px;
-        margin: 10px;
-        text-align: center;
-        border-radius: 10px;
-        display: block;
-        margin: 0 auto;
-    }
-    h3{
-        font-size: 40px;
-        color: aliceblue;
-        text-align: center;
-        margin-top:20px;
-        border-radius: 1px;
-    }
-}
-
-p.old-price{
-    background-color: hsl(0, 0%, 0%);
-    font-size: 30px;
-    text-align: center;
-    color: aliceblue;
-    padding: 3%;
-    border-radius: 1px;
-    text-decoration: line-through;
-}
-
-
-p.price {
-    background-color: hsl(0, 0%, 0%);
-    font-size: 30px;
-    text-align: center;
-    color: aliceblue;
-    padding: 3%;
-    border-radius: 1px;
-}
-
-.button{
-    background-color: $color4;
-    border-radius: 10px;
-    border-top-left-radius: 50px;
-    border-top-right-radius: 50px;
-    border-bottom-left-radius: 50px;
-    border-bottom-right-radius: 50px;
-    padding: 20px;
-    width: 200px;
-    display: block;
-    margin: 0 auto;
-    margin-top: 10px;
-    margin-bottom: 50px;
-    transition: all .5s;
-    border: 3px solid $color3;
-    button{
-        font-weight:bold;
-        text-transform:uppercase;
-        color:aliceblue;
-        font-size: 20px;
-        background: none;
-        border-bottom: none;
-        border-right: none;
-        border-top: none;
-        border-left:none;
-        padding: 1px;
-        margin: 2px;
-    }
-}
-.button:hover{
-    transform: scale(1.2);
-}
+@import "_item.scss";
 
 /*Footer*/
 
 footer{
-    width: 100%;
+    width: $size1;
     background-color: $color4;
     text-align: center;
     font-size: 30px;
@@ -219,22 +125,50 @@ footer{
 
 @media  screen and (width < 600px) {
     footer{
-        width: 100%;
+        width: $size1;
     }
     h2{
-        width: 100%;
+        width: $size1;
         font-size: 20px;
         text-align: center;
     }
     .p-5 img{
-        width: 100%;
+        width: $size1;
     }
     .item{
         width: 90%;
     }
     .h1{
-    width: 100%;
+    width: $size1;
     font-size: 20px;
     text-align: center;
+    }
+}
+.jumbotron{
+    width: 100%;
+    height: 500px;
+    background-position: center;
+    background-size: cover;
+}
+//*Jumbotron*//
+$jumbotron: indumentaria;
+
+/*Mi constante*/
+
+.jumbotron{
+    @if $jumbotron==indumentaria {
+        background-image: url(../imagenes/tienda-ropa/Diseño\ sin\ título\ \(23\).png);
+    }
+
+    @else if $jumbotron==clientes{
+        background-image: url(../imagenes/tienda-ropa/Diseño\ sin\ título\ \(3\).png);
+    }
+
+    @else if $jumbotron==nosotros{
+        background-image: url(../imagenes/tienda-ropa/Diseño\ sin\ título\ \(18\).png);
+    }
+
+    @else if $jumbotron==contacto{
+        background-image: url(../imagenes/tienda-ropa/Contacto.png);
     }
 }
