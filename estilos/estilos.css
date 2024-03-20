@@ -271,6 +271,92 @@ p {
     height: auto;
   }
 }
+/* Nosotros */
+/*Maps*/
+.maps {
+  width: 100%;
+  display: grid;
+  place-items: center;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  padding: 20px;
+}
+.maps iframe {
+  width: 50%;
+  border: 10px solid #FFBD59;
+  border-radius: 50px;
+  margin-bottom: 20px;
+}
+.maps h2 {
+  margin-top: 10px;
+}
+
+/*Galeria*/
+.galeria {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: repeat(8, 200px);
+  padding: 20px;
+  grid-gap: 20px;
+}
+
+.item-g {
+  border: 2px solid #FFBD59;
+  background-size: cover;
+  background-position: center;
+}
+
+.item1 {
+  background-image: url(../imagenes/tienda-ropa/Diseño\ sin\ título\ \(4\).png);
+}
+
+.item2 {
+  background-image: url(../imagenes/tienda-ropa/Diseño\ sin\ título\ \(2\).png);
+}
+
+.item3 {
+  background-image: url(../imagenes/tienda-ropa/Diseño\ sin\ título\ \(5\).png);
+}
+
+.item4 {
+  background-image: url(../imagenes/tienda-ropa/Diseño\ sin\ título\ \(6\).png);
+}
+
+.item5 {
+  background-image: url(../imagenes/tienda-ropa/Diseño\ sin\ título\ \(27\).png);
+}
+
+.item6 {
+  background-image: url(../imagenes/tienda-ropa/Diseño\ sin\ título\ \(29\).png);
+}
+
+.item7 {
+  background-image: url(../imagenes/tienda-ropa/Diseño\ sin\ título\ \(8\).png);
+}
+
+.item8 {
+  background-image: url(../imagenes/tienda-ropa/Diseño\ sin\ título\ \(7\).png);
+}
+
+/* Media Galeria*/
+@media only screen and (width > 480px) {
+  .galeria {
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: repeat(4, 400px);
+  }
+}
+@media screen and (width < 800px) {
+  iframe {
+    width: 100%;
+  }
+  .galeria {
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(8, 200px);
+    padding: 20px;
+    grid-gap: 20px;
+  }
+}
 /*Footer*/
 footer {
   width: 100%;
