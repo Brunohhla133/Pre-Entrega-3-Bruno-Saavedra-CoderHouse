@@ -89,7 +89,6 @@ p.price {
         font-weight:bold;
         text-transform:uppercase;
         color:aliceblue;
-        font-size: 30px;
         background: none;
         border-bottom: none;
         border-right: none;
@@ -97,12 +96,13 @@ p.price {
         border-left:none;
         padding: 1px;
         margin: 2px;
+        font-size: 20px;
     }
 }
 .button:hover{
     transform: scale(1.2);
 }
-@media screen and (width > 300px){
+@media screen and (width < 300px){
     .button{
         button{
             width: 100%;
@@ -112,7 +112,7 @@ p.price {
     }
 }
 
-@media screen and (width > 300px){
+@media screen and (width > 800px){
     button{
         margin-top: 10px;
     }
