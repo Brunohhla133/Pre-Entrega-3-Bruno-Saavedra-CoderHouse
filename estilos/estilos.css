@@ -248,11 +248,11 @@ h3 {
 /* Media Queries Clientes.html */
 @media only screen and (width < 600px) {
   .intro {
-    padding: 2px;
     display: block;
     margin: 0 auto;
-    width: 50%;
-    text-align: center;
+    padding: 2px;
+    width: 100%;
+    text-align: start;
     font-size: 20px;
   }
 }
