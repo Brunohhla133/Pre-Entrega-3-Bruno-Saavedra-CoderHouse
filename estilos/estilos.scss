@@ -116,6 +116,7 @@ main {
 @import "_item.scss";
 @import "_clientes.scss";
 @import"_nosotros.scss";
+@import"_contacto.scss";
 
 /*Footer*/
 
@@ -191,6 +192,7 @@ footer{
 
 .jumbotron-4{
     @include fondo;
+    height:600px;
     background-image: $fondo4;
 }
 
