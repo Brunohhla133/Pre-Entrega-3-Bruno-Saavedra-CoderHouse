@@ -8,14 +8,19 @@
     margin-top: 20px;
     margin-bottom: 20px;
     padding: 20px;
-    iframe{
-        width: $size2;
-        border: 10px solid $color2;
-        border-radius: 50px;
-        margin-bottom: 20px;
+    a{
+        text-decoration: none;
+        color: $color1;
+        font-size: 50px;
+        text-shadow: 0 0 10px $color3;
     }
-    h2{
-        margin-top: 10px;
+    h4{
+        font-size: 30px;
+        color: aliceblue;
+    }
+    p{
+        color: aliceblue;
+        font-size: 30px;
     }
 }
 
@@ -31,7 +36,7 @@
 }
 
 .item-g{
-    border: 2px solid #FFBD59;
+    border: 2px solid $color2;
     background-size: cover;
     background-position: center;
 }
@@ -78,9 +83,6 @@
 
 }
 @media  screen and (width < 800px){
-    iframe{
-        width: $size1;
-    }
     .galeria{
         grid-template-columns: 1fr;
         grid-template-rows: repeat(8, 200px);
@@ -88,3 +90,4 @@
         grid-gap: 20px;
     }
 }
+

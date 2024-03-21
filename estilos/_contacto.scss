@@ -87,3 +87,16 @@
         border-color: $color1;
     }
 }
+
+/* Media Queries Contacto.html */
+@media only screen and (width < 600px){
+    .formulario{
+        width: 100%;
+    }
+}
+
+@media only screen and (width < 900px){
+    .formulario{
+        width: 100%;
+    }
+}
