@@ -15,7 +15,7 @@ body {
 
 .navbar {
   width: 100%;
-  background-color: hsla(36, 3%, 30%, 0.911);
+  background-color: hsla(36, 3%, 30%, 0.959);
   z-index: 1;
   position: fixed;
 }
@@ -47,14 +47,22 @@ body {
   border: none;
 }
 
-.p-5 {
+.banner {
   width: 100%;
   background-color: black;
-  margin-bottom: 10px;
+  background-image: url(../imagenes/tienda-ropa/Diseño\ sin\ título\ \(13\).png);
+  background-position: center;
+  background-size: cover;
+  display: grid;
+  place-items: center;
+  padding-top: 40px;
 }
-.p-5 img {
+.banner img {
   width: 100%;
-  margin-top: 80px;
+  display: grid;
+  place-items: center;
+  margin-top: 50px;
+  margin-bottom: 50px;
 }
 
 /* h1 */

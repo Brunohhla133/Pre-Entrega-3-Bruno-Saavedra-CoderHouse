@@ -34,7 +34,7 @@ body{
 //*NavBar*//
 .navbar{
     width: $size1;
-    background-color: $color4;
+    background-color: hsla(36, 3%, 30%, 0.959);
     z-index: 1;
     position: fixed;
     .nav-link{
@@ -69,13 +69,21 @@ body{
 
 //*Jumbotron p-5*//
 
-.p-5{
+.banner{
     width: $size1;
     background-color: black;
-    margin-bottom: 10px;
+    background-image: url(../imagenes/tienda-ropa/Diseño\ sin\ título\ \(13\).png);
+    background-position: center;
+    background-size: cover;
+    display: grid;
+    place-items:center;
+    padding-top: 40px;
     img{
         width: $size1;
-        margin-top: 80px;
+        display: grid;
+        place-items:center;
+        margin-top: 50px;
+        margin-bottom: 50px;
     }
 }
 
